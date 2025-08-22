@@ -1,0 +1,149 @@
+[
+  {
+    "code": "AIRFLOW_MANUAL_SET",
+    "title": "Set Airflow (manual fan speed)",
+    "category": "Controls / Airflow",
+    "description": "How to set fan speed by hand.",
+    "causes": [
+      "Another function may override the manual level (e.g., Weekly Program)."
+    ],
+    "steps": [
+      "Open SPEED.",
+      "Choose the desired level and press OK.",
+      "If it does not change, check Weekly Settings or alarms."
+    ],
+    "fixes": [
+      "Turn OFF the Weekly Program or edit its schedule."
+    ],
+    "ui_labels": ["SPEED", "OK", "BACK"]
+  },
+  {
+    "code": "WEEKLY_OVERRIDES_AIRFLOW",
+    "title": "Weekly Program overrides manual airflow",
+    "category": "Scheduling / Overrides",
+    "description": "When Weekly Program is ON, airflow follows the schedule.",
+    "causes": [
+      "Scheduled profiles set fan levels by time."
+    ],
+    "steps": [
+      "Open WEEKLY SETTINGS.",
+      "Toggle ON → OFF or edit PROGRAM.",
+      "Set your airflow again in SPEED."
+    ],
+    "fixes": [
+      "Disable Weekly Program for full manual control."
+    ],
+    "ui_labels": ["WEEKLY SETTINGS", "ON", "PROGRAM", "VIEW", "OK", "BACK"]
+  },
+  {
+    "code": "INPUT_010V_AIRFLOW",
+    "title": "Input 1 (0–10V) regulates airflow",
+    "category": "Inputs / Analog",
+    "description": "An external 0–10V signal can control fan speed.",
+    "causes": [
+      "Wrong polarity (0V=STOP vs 10V=STOP).",
+      "External controller forcing a level."
+    ],
+    "steps": [
+      "Open INPUT SETTINGS → 1 → REG AIR FLOW.",
+      "Check UNIT (0V=STOP / 10V=STOP).",
+      "Remove/adjust external signal if you need manual control."
+    ],
+    "fixes": [
+      "Correct scaling/polarity.",
+      "Disconnect or tune the external source."
+    ],
+    "ui_labels": ["INPUT SETTINGS", "REG AIR FLOW", "UNIT", "0V=STOP", "10V=STOP", "OK", "BACK"]
+  },
+  {
+    "code": "BYPASS_AFFECTS_AIRFLOW",
+    "title": "Bypass settings may affect airflow",
+    "category": "Overrides / Bypass",
+    "description": "AUTO or MANUAL BYPASS can change or limit fan behavior.",
+    "causes": [
+      "AUTO profile enforces predefined speeds.",
+      "Min outdoor temperature rule blocks some states."
+    ],
+    "steps": [
+      "Open BYPASS settings.",
+      "Check AUTO/MANUAL and temperature limits.",
+      "Adjust or disable if airflow is limited."
+    ],
+    "fixes": [
+      "Choose the desired mode or relax limits."
+    ],
+    "ui_labels": ["BYPASS", "AUTOMATISCH", "MANUEEL", "OPEN", "GESLOTEN", "OK"]
+  },
+  {
+    "code": "CLIMA_SETTINGS",
+    "title": "Clima settings (comfort profiles)",
+    "category": "Comfort / Profiles",
+    "description": "Preset comfort rules can change airflow and temperature behavior.",
+    "causes": [
+      "Active profile applies its own fan/temperature rules."
+    ],
+    "steps": [
+      "Open CLIMA SETTINGS.",
+      "Review the active profile and its targets.",
+      "Adjust profile or switch to a simpler mode."
+    ],
+    "fixes": [
+      "Use a basic profile if you want manual control."
+    ],
+    "ui_labels": ["CLIMA SETTINGS", "OK", "BACK"]
+  },
+  {
+    "code": "HYSTERESIS_TEMP",
+    "title": "Hysteresis temperature (ON/OFF points)",
+    "category": "Temperature / Control",
+    "description": "Defines when heating/cooling turns ON and OFF.",
+    "causes": [
+      "Wide hysteresis can delay reactions."
+    ],
+    "steps": [
+      "Open HYSTERESIS TEMP.",
+      "Set ON and OFF points (heating/cooling).",
+      "Confirm with OK."
+    ],
+    "fixes": [
+      "Use moderate gaps for stable comfort."
+    ],
+    "ui_labels": ["HYSTERESIS TEMP", "ON", "OFF", "OK"]
+  },
+  {
+    "code": "SERVICE_PASSWORD",
+    "title": "Service menu (password)",
+    "category": "Service / Access",
+    "description": "Protected settings for installers/advanced users.",
+    "causes": [
+      "Wrong password prevents access."
+    ],
+    "steps": [
+      "Open SERVICE.",
+      "Enter the password.",
+      "Change only if you know the impact."
+    ],
+    "fixes": [
+      "Contact support if you need access."
+    ],
+    "ui_labels": ["SERVICE", "MOT DE PASSE", "OK", "RETO"]
+  },
+  {
+    "code": "SERVICE_UPDATE_SENSORS",
+    "title": "Update & sensor settings",
+    "category": "Service / Maintenance",
+    "description": "Software update and sensor calibration/adjustment.",
+    "causes": [
+      "Old firmware or mis‑calibrated sensors."
+    ],
+    "steps": [
+      "Open SERVICE → MISE A JOUR for update.",
+      "Open REGL. SONDES for sensor settings."
+    ],
+    "fixes": [
+      "Perform updates with stable power.",
+      "Calibrate sensors as instructed."
+    ],
+    "ui_labels": ["SERVICE", "MISE A JOUR", "REGL. SONDES", "CHANGER MDP", "OK"]
+  }
+]

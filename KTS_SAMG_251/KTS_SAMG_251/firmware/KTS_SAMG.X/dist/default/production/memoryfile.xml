@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/KTS_SAMG.X.production.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>524288</length>
+      <used>356332</used>
+      <free>167956</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>163840</length>
+      <used>68599</used>
+      <free>95241</free>
+    </memory>
+  </executable>
+</project>
